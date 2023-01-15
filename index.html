@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        width:500px;
+    }
+    
+    ul li{
+        padding:40px 50px;
+        border:1px solid red;
+        list-style:none;
+        text-align:center;
+        cursor:pointer
+    }
+    li:hover {
+        background:red
+    }
+    .active{
+        background:red;
+    }
+
+</style>
+
+<body>
+    
+    <div>
+        <ul class="tabs">
+            <li class="btn active">
+                <h3>payroll</h3>
+                <span>Lorem ipsum dolor sit amet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos exercitationem, aspernatur impedit veritatis tempora dolor dolore a delectus! Reprehenderit vel suscipit saepe maxime blanditiis tenetur est nobis quis soluta repudiandae!</span>
+            </li>
+            <li class="btn">
+                <h3>expenses</h3>
+                <span>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum similique ad excepturi fuga praesentium sit, nihil ducimus voluptates? Possimus, dolorem soluta? Iusto et rem velit quam laudantium officiis incidunt.</span>
+            </li>
+            <li class="btn">
+                <h3> vat</h3>  
+                <span>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore repudiandae veniam ut vero modi ratione odio explicabo temporibus qui omnis sed ipsam nobis consequuntur, reprehenderit nam molestiae similique aspernatur vitae?</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        let tabs = document.querySelectorAll(".tabs li")
+        
+        tabs.forEach((tab,index)=>{
+            tab.addEventListener("click",()=>{
+                tabs.forEach((tab)=>{
+                    tab.classList.remove("active")
+                });
+                    tabs[index].classList.add("active")
+            })
+        })
+       
+    </script>
+</body>
+</html>
